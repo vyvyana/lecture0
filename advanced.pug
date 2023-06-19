@@ -1,0 +1,24 @@
+include ./views/mixins/_mixins
+append stylesheet 
+    link(rel="stylesheet", href="./styles/home.css")
+block title 
+    title Google-Advanced
+body 
+    .advanced
+        .advanced-top
+            .advanced-top-right 
+                a.advanced-logo(href="/") 
+                    img.advanced-logo(src="./images/gg.png", alt="mini-logo-google")
+                span.advanced-title Tìm kiếm nâng cao
+            .gg-top
+                a.gg-item(href="/") Home
+                a.gg-item(href="/advanced.html") Advanced 
+                a.gg-item(href="/image.html") Image
+        .advanced-content
+            .advanced-list 
+                form.advance-form(action="https://www.google.com/search")
+                    +findPages("tất cả các từ này:","as_q","Nhập các từ quan trọng:")
+                    +findPages("từ hoặc cụm từ chính xác này:","as_epq","Đặt từ chính xác trong dấu trích dẫn:")
+                    +findPages("bất kỳ từ nào trong số này:","as_oq","Nhập OR giữa tất cả các từ mà bạn muốn: ")
+                    +findPages("không từ nào trong số này:","as_eq","Đặt dấu trừ ngay trước từ mà bạn không muốn:")
+                    input.advanced-button(type="submit" value="Tìm kiếm nâng cao")

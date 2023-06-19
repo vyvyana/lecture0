@@ -1,0 +1,28 @@
+append stylesheet 
+    link(rel="stylesheet", href="./styles/home.css")
+block title 
+    title Google-Images
+body 
+    .gg-top
+        a.gg-item(href="/") Home
+        a.gg-item(href="/advanced.html") Advanced 
+        a.gg-item(href="/image.html") Image
+    .gg-content
+        a.gg-logo(href="/")
+            img.img-logo(src="./images/gg.png", alt="logo-gg")
+            span.img-span hình ảnh
+        .gg-search
+            .gg-search-left
+                img.gg-icon-search(src="./images/icons/icon-search.svg", alt="icon-search")
+                form.form-home(action="https://www.google.com/search")
+                    input.gg-search-input(type="text" name="q")
+                    input(name="hl", value="vi", type="hidden")
+                    input(name="authuser", value="0", type="hidden")
+                    input(name="tbm", value="isch", type="hidden")
+                    input(name="source", type="hidden", value="hp")
+                    input(value="KQuMZOf0HYKJ4-EPzq-IiAY", name="ei", type="hidden")
+                    input.gg-image-button(type="submit" value="Google Search")
+            .gg-search-right
+                img.gg-icon(src="./images/icons/icon-keyboard.svg", alt="keyboard")
+                img.gg-icon(src="./images/icons/icon-micro.svg", alt="micro")
+                img.gg-icon(src="./images/icons/icon-camera.svg", alt="camera")
